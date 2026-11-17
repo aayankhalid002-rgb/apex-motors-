@@ -1,0 +1,969 @@
+:root {
+    --gold: #c7a56a;
+    --bg: #0b0d10;
+    --muted: #a0a2a4
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #f4f2ed;
+    font-family: 'DM Sans', sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.topline {
+    height: 32px;
+    background: var(--gold);
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6%;
+    align-items: center;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: bold
+}
+
+header {
+    height: 82px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0b0d10;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    border-bottom: 1px solid #292c30
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font: 800 30px Manrope;
+    letter-spacing: -3px
+}
+
+.logo span {
+    color: var(--gold)
+}
+
+.logo b {
+    font-size: 13px;
+    letter-spacing: 2px
+}
+
+.logo small {
+    display: block;
+    font: 700 8px 'DM Sans';
+    letter-spacing: 3px;
+    color: #999;
+    margin-top: 4px
+}
+
+nav {
+    display: flex;
+    gap: 30px
+}
+
+nav a,
+.visit {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    font-weight: bold;
+    color: #ccc
+}
+
+nav a:hover {
+    color: var(--gold)
+}
+
+.visit {
+    border: 1px solid #555;
+    padding: 13px 16px
+}
+
+#menu {
+    display: none;
+    background: none;
+    color: white;
+    border: 0;
+    font-size: 23px
+}
+
+.hero {
+    height: 690px;
+    min-height: 580px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=90') center/cover
+}
+
+.shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #07090bed, #07090b99 48%, #07090b12), linear-gradient(0deg, #07090b66, transparent)
+}
+
+.heroText {
+    position: relative;
+    max-width: 680px
+}
+
+.heroText small,
+.kicker {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: bold
+}
+
+.hero h1,
+h2 {
+    font: 600 clamp(48px, 7vw, 88px)/1 Manrope;
+    letter-spacing: -5px;
+    margin: 30px 0 20px
+}
+
+.hero h1 i,
+h2 i {
+    font-family: Georgia;
+    color: var(--gold);
+    font-weight: 400
+}
+
+.heroText p {
+    max-width: 470px;
+    line-height: 1.9;
+    color: #ddd
+}
+
+.goldbtn,
+.lightbtn {
+    display: inline-block;
+    background: var(--gold);
+    color: #111;
+    padding: 17px 21px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .25s
+}
+
+.goldbtn:hover,
+.lightbtn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1)
+}
+
+.heroFoot {
+    position: absolute;
+    bottom: 30px;
+    left: 8%;
+    font-size: 9px;
+    letter-spacing: 1.5px
+}
+
+.heroFoot span {
+    color: var(--gold);
+    margin: 0 12px
+}
+
+.pad {
+    padding: 105px 8%
+}
+
+.about,
+.services {
+    background: #f0eee8;
+    color: #17191b
+}
+
+.about .kicker,
+.services .kicker {
+    color: #987747
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    align-items: center
+}
+
+.split h2,
+h2 {
+    font-size: clamp(48px, 6vw, 74px)
+}
+
+.split h2 i,
+.services h2 i {
+    color: #987747
+}
+
+.split h3 {
+    font: 500 21px/1.5 Manrope
+}
+
+.split p,
+.sectionhead p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #777
+}
+
+.under {
+    display: inline-block;
+    border-bottom: 1px solid #a88b5d;
+    padding: 0 0 10px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px
+}
+
+.stats {
+    display: flex;
+    gap: 14%;
+    border-top: 1px solid #d4d1ca;
+    margin-top: 70px;
+    padding-top: 28px
+}
+
+.stats b {
+    font: 700 34px Manrope
+}
+
+.stats small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+    color: #777;
+    margin-top: 7px
+}
+
+.inventory {
+    background: #0e1115
+}
+
+.sectionhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px
+}
+
+.sectionhead h2 {
+    margin-bottom: 0
+}
+
+.sectionhead p {
+    max-width: 300px;
+    color: var(--muted)
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    margin: 45px 0 25px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #303338
+}
+
+#filters,
+.tools {
+    display: flex;
+    gap: 8px
+}
+
+#filters button {
+    border: 0;
+    background: none;
+    color: #999;
+    padding: 10px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer
+}
+
+#filters button.active,
+#filters button:hover {
+    color: var(--gold);
+    background: #c7a56a18
+}
+
+.tools input,
+.tools select {
+    background: #15191e;
+    border: 1px solid #35393e;
+    color: #ddd;
+    padding: 11px;
+    font-size: 10px;
+    outline: 0
+}
+
+.tools input {
+    width: 170px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px
+}
+
+.car {
+    background: #171b20;
+    border: 1px solid #292e33;
+    transition: .3s;
+    overflow: hidden
+}
+
+.car:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold)
+}
+
+.car img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    transition: .5s
+}
+
+.car:hover img {
+    transform: scale(1.05)
+}
+
+.photo {
+    overflow: hidden;
+    position: relative
+}
+
+.tag {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: var(--gold);
+    color: #111;
+    padding: 7px 9px;
+    font-size: 8px;
+    font-weight: bold
+}
+
+.carbody {
+    padding: 18px
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 9px;
+    letter-spacing: 1px
+}
+
+.car h3 {
+    font: 600 18px Manrope;
+    margin: 12px 0 18px
+}
+
+.carfoot {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    padding-top: 14px;
+    align-items: center
+}
+
+.price {
+    color: var(--gold);
+    font: 700 16px Manrope
+}
+
+.details {
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1px;
+    cursor: pointer
+}
+
+.details span {
+    color: var(--gold)
+}
+
+#empty {
+    text-align: center;
+    color: #aaa;
+    padding: 40px
+}
+
+.feature {
+    min-height: 500px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #07090bf2, #07090b99 55%, #07090b22), url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=2000&q=85') center/cover
+}
+
+.feature>div {
+    max-width: 500px
+}
+
+.feature h2 {
+    font-size: 75px
+}
+
+.feature p {
+    color: #bbb;
+    line-height: 1.9;
+    max-width: 400px;
+    font-size: 13px
+}
+
+.lightbtn {
+    background:#C9A45C;
+}
+
+.servicegrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 45px
+}
+
+.servicegrid article {
+    border: 1px solid #d5d1c9;
+    padding: 27px;
+    min-height: 190px;
+    transition: .25s
+}
+
+.servicegrid article:hover {
+    background: white;
+    transform: translateY(-4px)
+}
+
+.servicegrid article>b {
+    float: right;
+    color: #999;
+    font-size: 10px
+}
+
+.servicegrid h3 {
+    font: 700 17px Manrope;
+    margin-top: 35px
+}
+
+.servicegrid p {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.8
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr .85fr;
+    gap: 12%;
+    background: #11151a
+}
+
+.contact h2 {
+    font-size: clamp(45px, 6vw, 70px)
+}
+
+.contact h2 i {
+    color: var(--gold)
+}
+
+.contact>div>p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 390px;
+    margin: 22px 0
+}
+
+.contact form {
+    background: #1a1f25;
+    padding: 28px
+}
+
+.contact form h3 {
+    font: 700 13px Manrope;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #34393e;
+    padding-bottom: 18px
+}
+
+.contact label {
+    display: block;
+    font-size: 10px;
+    color: #bbb;
+    margin: 16px 0
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    background: #101419;
+    border: 1px solid #363c42;
+    color: white;
+    outline: 0;
+    font: 11px 'DM Sans'
+}
+
+.contact form>small {
+    display: block;
+    color: #888;
+    font-size: 9px;
+    margin-top: 13px
+}
+
+.contact form #feedback {
+    color: var(--gold);
+    font-size: 11px
+}
+
+footer {
+    padding: 28px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #292d32;
+    color: #888;
+    font-size: 9px;
+    letter-spacing: 1px
+}
+
+footer>a:last-child {
+    color: var(--gold)
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    align-items: center;
+    justify-content: center;
+    padding: 20px
+}
+
+.modal.open {
+    display: flex
+}
+
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background: #000d;
+    backdrop-filter: blur(5px)
+}
+
+.dialog {
+    position: relative;
+    background: #171c22;
+    width: min(720px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    border: 1px solid #555
+}
+
+.dialog>button {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: 2;
+    background: #111;
+    color: white;
+    border: 1px solid #666;
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    cursor: pointer
+}
+
+.dialog img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover
+}
+
+.dialog section {
+    padding: 25px
+}
+
+.dialog h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin: 12px 0
+}
+
+.dialog p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.8
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+    margin: 22px 0
+}
+
+.specs div {
+    border: 1px solid #333;
+    padding: 12px
+}
+
+.specs small {
+    display: block;
+    color: #999;
+    font-size: 8px;
+    margin-bottom: 7px
+}
+
+.specs b {
+    font-size: 11px
+}
+
+.reveal {
+    animation: rise .7s both
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@media(max-width:900px) {
+    nav {
+        gap: 14px
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .pad {
+        padding: 80px 6%
+    }
+}
+
+@media(max-width:650px) {
+    .topline {
+        padding: 0 5%;
+        font-size: 8px
+    }
+
+    .topline span {
+        display: none
+    }
+
+    header {
+        height: 70px;
+        padding: 0 5%
+    }
+
+    #menu {
+        display: block
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #12161b;
+        padding: 24px;
+        flex-direction: column
+    }
+
+    nav.open {
+        display: flex
+    }
+
+    .visit {
+        display: none
+    }
+
+    .hero {
+        height: 650px;
+        padding: 0 7%
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px
+    }
+
+    .heroFoot {
+        left: 7%
+    }
+
+    .pad {
+        padding: 72px 6%
+    }
+
+    .split,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+
+    .stats {
+        gap: 7%;
+        margin-top: 48px
+    }
+
+    .stats b {
+        font-size: 26px
+    }
+
+    .stats small {
+        font-size: 7px
+    }
+
+    .sectionhead {
+        align-items: start;
+        flex-direction: column
+    }
+
+    .controls {
+        align-items: start;
+        flex-direction: column
+    }
+
+    .tools {
+        width: 100%
+    }
+
+    .tools input {
+        flex: 1;
+        min-width: 0
+    }
+
+    .grid,
+    .servicegrid {
+        grid-template-columns: 1fr
+    }
+
+    .car img {
+        height: 230px
+    }
+
+    .feature {
+        min-height: 470px;
+        padding: 70px 7%
+    }
+
+    .feature h2 {
+        font-size: 60px
+    }
+
+    .contact form {
+        padding: 20px
+    }
+
+    footer {
+        padding: 25px 6%;
+        gap: 18px;
+        flex-wrap: wrap
+    }
+
+    footer>span {
+        order: 3;
+        width: 100%
+    }
+
+    .specs {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important
+    }
+}
+
+/* Final interface polish */
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+a:visited {
+    color: inherit
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px
+}
+
+nav a {
+    text-decoration: none !important
+}
+
+.logo,
+.logo:visited,
+.visit,
+.visit:visited,
+footer a,
+footer a:visited {
+    color: inherit
+}
+
+#empty[hidden] {
+    display: none
+}
+
+.contact form button {
+    font-family: 'DM Sans', sans-serif
+}
+
+@media(hover:hover) {
+    .visit:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+        transition: .25s
+    }
+}
+
+/* Scroll reveal and interaction finishing details */
+.js-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .75s ease, transform .75s cubic-bezier(.2, .7, .2, 1)
+}
+
+.js-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.heroText>* {
+    animation: heroEnter .8s both
+}
+
+.heroText>*:nth-child(1) {
+    animation-delay: .08s
+}
+
+.heroText>*:nth-child(2) {
+    animation-delay: .2s
+}
+
+.heroText>*:nth-child(3) {
+    animation-delay: .34s
+}
+
+.heroText>*:nth-child(4) {
+    animation-delay: .48s
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(22px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+nav a.active {
+    color: var(--gold);
+    position: relative
+}
+
+nav a.active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    height: 1px;
+    background: var(--gold)
+}
+
+.car .details:hover {
+    color: var(--gold)
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus,
+.tools input:focus,
+.tools select:focus {
+    border-color: var(--gold)
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .js-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none
+    }
+
+    .heroText>* {
+        animation: none
+    }
+}

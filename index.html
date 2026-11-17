@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0b0d10">
+    <meta name="description" content="Explore a curated collection of distinctive premium vehicles at APEX MOTORS.">
+    <title>APEX MOTORS — Drive Beyond</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="topline">THE APEX COLLECTION <span>PRECISION. PERFORMANCE. PRESENCE.</span> EST. 2026</div>
+    <header><a class="logo" href="#home">A<span>／</span> <b>APEX MOTORS<small>DRIVE BEYOND</small></b></a><button
+            id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button>
+        <nav id="nav"><a href="#home">HOME</a><a href="#inventory">INVENTORY</a><a href="#about">ABOUT</a><a
+                href="#services">SERVICES</a><a href="#contact">CONTACT</a></nav><a class="visit" href="#contact">BOOK A
+            VISIT ↗</a>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="shade"></div>
+            <div class="heroText"><small>— THE ART OF AUTOMOTIVE EXCELLENCE</small>
+                <h1>Make every<br><i>arrival</i> matter.</h1>
+                <p>Discover a carefully selected collection of exceptional vehicles, where performance meets timeless
+                    design.</p><a class="goldbtn" href="#inventory">EXPLORE INVENTORY ↗</a>
+            </div>
+            <div class="heroFoot">01 — 06 <span>────────</span> CURATED AUTOMOTIVE</div>
+        </section>
+        <section class="about pad" id="about"><small class="kicker">01 / OUR PHILOSOPHY</small>
+            <div class="split">
+                <h2>Not just cars.<br><i>Character.</i></h2>
+                <div>
+                    <h3>The right car is more than a way to get somewhere. It's a reflection of what moves you.</h3>
+                    <p>At APEX MOTORS, we bring together distinctive vehicles chosen for their design, condition and
+                        driving experience. Every detail matters. Every journey starts here.</p><a class="under"
+                        href="#services">THE APEX EXPERIENCE ↗</a>
+                </div>
+            </div>
+            <div class="stats">
+                <div><b>06+</b><small>CURATED VEHICLES</small></div>
+                <div><b>100%</b><small>PASSION FOR CARS</small></div>
+                <div><b>01</b><small>PERSONAL EXPERIENCE</small></div>
+            </div>
+        </section>
+        <section class="inventory pad" id="inventory">
+            <div class="sectionhead">
+                <div><small class="kicker">02 / THE COLLECTION</small>
+                    <h2>Find your <i>drive.</i></h2>
+                </div>
+                <p>Explore our selection of distinctive machines, each with its own story to tell.</p>
+            </div>
+            <div class="controls">
+                <div id="filters"><button class="active" data-filter="All">ALL VEHICLES</button><button
+                        data-filter="SUV">SUV</button><button data-filter="Sedan">SEDAN</button><button
+                        data-filter="Sports">SPORTS</button></div>
+                <div class="tools"><input id="search" type="search" placeholder="⌕ Search vehicles..."
+                        aria-label="Search vehicles"><select id="sort" aria-label="Sort vehicles">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="year">Newest First</option>
+                    </select></div>
+            </div>
+            <div class="grid" id="grid"></div>
+            <p id="empty" hidden>No vehicles match your search. Try another filter.</p>
+        </section>
+        <section class="feature">
+            <div><small class="kicker">03 / THE APEX STANDARD</small>
+                <h2>Driven by<br><i>distinction.</i></h2>
+                <p>From the first conversation to the moment you take the wheel, our focus is on a considered, personal
+                    experience.</p><a class="lightbtn" href="#contact">START A CONVERSATION ↗</a>
+            </div>
+        </section>
+        <section class="services pad" id="services">
+            <div class="sectionhead">
+                <div><small class="kicker">04 / WHAT WE OFFER</small>
+                    <h2>The details<br><i>matter.</i></h2>
+                </div>
+                <p>A straightforward, attentive approach to finding and enjoying your next vehicle.</p>
+            </div>
+            <div class="servicegrid">
+                <article><b>01</b>
+                    <h3>◇ Curated Selection</h3>
+                    <p>A considered range of vehicles selected for their appeal, quality and character.</p>
+                </article>
+                <article><b>02</b>
+                    <h3>↗ Personal Guidance</h3>
+                    <p>Get clear information and one-to-one assistance throughout your selection.</p>
+                </article>
+                <article><b>03</b>
+                    <h3>◷ Test Drive Booking</h3>
+                    <p>Arrange a viewing and experience the vehicle before making your decision.</p>
+                </article>
+            </div>
+        </section>
+        <section class="contact pad" id="contact">
+            <div><small class="kicker">05 / GET IN TOUCH</small>
+                <h2>Your next chapter<br>starts <i>here.</i></h2>
+                <p>Tell us what you're looking for. Our team will be happy to help you explore the collection.</p><small
+                    class="kicker">VISIT OUR SHOWROOM</small>
+                <p>By appointment</p><small class="kicker">ENQUIRIES</small>
+                <p>Contact our showroom team to arrange a private viewing.</p>
+            </div>
+            <form id="form">
+                <h3>LET'S TALK CARS ↗</h3><label>Your name<input name="name" autocomplete="name" required
+                        placeholder="Full name"></label><label>Email address<input type="email" name="email"
+                        autocomplete="email" required placeholder="you@example.com"></label><label>I'm interested
+                    in<select id="interest" required>
+                        <option value="">Select a vehicle</option>
+                    </select></label><label>Message<textarea rows="3"
+                        placeholder="What are you looking for?"></textarea></label><button class="goldbtn">SEND ENQUIRY
+                    ↗</button><small>Demo form — no message is sent to a server.</small>
+                <p id="feedback" role="status"></p>
+            </form>
+        </section>
+    </main>
+    <footer><a class="logo" href="#home">A<span>／</span> <b>APEX MOTORS<small>DRIVE BEYOND</small></b></a><span>© 2026
+            APEX MOTORS. DEMO WEBSITE.</span><a href="#home">BACK TO TOP ↑</a></footer>
+    <div class="modal" id="modal">
+        <div class="backdrop"></div>
+        <div class="dialog"><button id="close">×</button>
+            <div id="details"></div>
+        </div>
+    </div>
+    <script src="js/cars.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
